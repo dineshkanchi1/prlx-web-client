@@ -51,11 +51,5 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dineshkanchi1/prlx-web-client.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/dineshkanchi1/prlx-web-client/issues"
-  },
-  "homepage": "https://github.com/dineshkanchi1/prlx-web-client#readme"
+  }
 }
