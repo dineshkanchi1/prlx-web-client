@@ -7,7 +7,7 @@ export const register = (name, email, password, interest) => async (dispatch) =>
         payload: { email, password}
     });
     try{
-        const {data} = await Axios.post('http://localhost:2100/api/users/register',{name, email, password, interest});
+        const {data} = await Axios.post('https://prlx-web-interest.herokuapp.com/api/users/register',{name, email, password, interest});
         dispatch({
             type: USER_REGISTER_SUCCESS,
             payload: data,
@@ -31,7 +31,7 @@ export const signin = (email, password) => async (dispatch) => {
         payload: { email, password}
     });
     try{
-        const {data} = await Axios.post('http://localhost:2100/api/users/signin',{email, password});
+        const {data} = await Axios.post('https://prlx-web-interest.herokuapp.com/api/users/signin',{email, password});
         dispatch({
             type: USER_SIGNIN_SUCCESS,
             payload: data,
@@ -57,7 +57,7 @@ export const listUsers = () => async (dispatch) => {
         type: USER_LIST_REQUEST
     });
     try{
-        const {data} = await Axios.get('http://localhost:2100/api/users');
+        const {data} = await Axios.get('https://prlx-web-interest.herokuapp.com/api/users');
         dispatch({
             type: USER_LIST_SUCCESS,
             payload: data.map(user => ({id: user._id, name: user.name, email: user.email, interest: user.interest}))
